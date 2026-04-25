@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import Typography from "@mui/material/Typography"
-
-export const GetBills=()=>{
-    return(
-        <Typography>
-            GET BILLS
-        </Typography>
-    )
-}
-=======
 import ArchiveRoundedIcon from "@mui/icons-material/ArchiveRounded";
 import InsightsRoundedIcon from "@mui/icons-material/InsightsRounded";
 import ReceiptLongRoundedIcon from "@mui/icons-material/ReceiptLongRounded";
@@ -135,4 +124,3 @@ export const GetBills = () => {
     </Box>
   );
 };
->>>>>>> 460084d (pushded the updated changess of the billing software)
