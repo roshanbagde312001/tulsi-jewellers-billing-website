@@ -1,13 +1,195 @@
+:root {
+  --bg-primary: #f4f7fb;
+  --bg-surface: #ffffff;
+  --bg-surface-strong: #eef3f9;
+  --border-soft: #d9e2ec;
+  --text-primary: #142033;
+  --text-secondary: #35455f;
+  --text-muted: #66768f;
+  --accent-gold: #2158d5;
+  --accent-gold-soft: #e8f0ff;
+  --shadow-soft: 0 16px 40px rgba(15, 23, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg-primary);
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(33, 88, 213, 0.06), transparent 24%),
+    linear-gradient(180deg, #f8fbff 0%, #f4f7fb 100%);
+  color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  min-height: 100vh;
+}
+
+.page-shell {
+  padding-top: 8px;
+}
+
+.hero-banner {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 24px;
+  padding: 28px;
+  border: 1px solid var(--border-soft);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at top right, rgba(33, 88, 213, 0.08), transparent 24%),
+    linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  box-shadow: var(--shadow-soft);
+}
+
+.hero-chip {
+  background-color: var(--accent-gold-soft) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid #cddcff !important;
+  font-weight: 600 !important;
+}
+
+.hero-title {
+  margin-top: 18px !important;
+  max-width: 760px;
+  font-weight: 800 !important;
+  line-height: 1.1 !important;
+}
+
+.hero-description {
+  max-width: 760px;
+  margin-top: 14px !important;
+  color: var(--text-muted);
+  font-size: 1rem !important;
+  line-height: 1.7 !important;
+}
+
+.app-card {
+  padding: 24px;
+  border-radius: 20px !important;
+  border: 1px solid var(--border-soft);
+  background: var(--bg-surface) !important;
+  box-shadow: var(--shadow-soft) !important;
+}
+
+.gold-accent {
+  color: #2158d5;
+  background: #edf3ff;
+  border: 1px solid #d6e3ff;
+}
+
+.section-eyebrow {
+  color: var(--accent-gold);
+  letter-spacing: 0.08em;
+  font-size: 0.76rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+}
+
+.empty-state {
+  min-height: 240px;
+  border: 1px dashed #cfd9e8;
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 24px;
+  background: #f8fbff;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  color: var(--text-secondary);
+}
+
+.summary-row--highlight {
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: #eff4ff;
+  border: 1px solid #d7e4ff;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.MuiPaper-root {
+  background-image: none !important;
+}
+
+.MuiTypography-root,
+.MuiButton-root,
+.MuiChip-label {
+  letter-spacing: 0.01em;
+}
+
+.MuiButton-root {
+  min-height: 46px;
+  border-radius: 14px !important;
+  text-transform: none !important;
+  font-weight: 700 !important;
+  padding-inline: 18px !important;
+}
+
+.MuiButton-contained {
+  background: #2158d5 !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+.MuiButton-outlined {
+  border-color: #ccd8e6 !important;
+  color: var(--text-primary) !important;
+}
+
+.MuiInputBase-root {
+  border-radius: 16px !important;
+  background: #ffffff;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: #d5deea !important;
+}
+
+.MuiInputLabel-root,
+.MuiInputBase-input,
+.MuiInputAdornment-root,
+.MuiSvgIcon-root {
+  color: var(--text-primary) !important;
+}
+
+.MuiFormHelperText-root {
+  color: var(--text-muted) !important;
+}
+
+.MuiTableCell-root {
+  border-bottom: 1px solid #e6edf5 !important;
+  color: var(--text-secondary) !important;
+}
+
+.MuiTableHead-root .MuiTableCell-root {
+  color: var(--text-primary) !important;
+  font-weight: 700 !important;
+  background: #f7f9fc;
+}
+
+@media (max-width: 900px) {
+  .hero-banner {
+    padding: 22px;
+    border-radius: 22px;
+  }
+
+  .app-card {
+    padding: 20px;
+    border-radius: 20px !important;
+  }
 }
