@@ -5,6 +5,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import * as React from 'react';
+import { useEffect, useState } from 'react';
 
 export default function FormDialog({handelAddItembuttoncallback,ismodalOpen,setmodalOpen,editarrayvar,setflagforedit,flagforedit,handelUpdateItembuttoncallback}) {
 
@@ -13,7 +14,7 @@ export default function FormDialog({handelAddItembuttoncallback,ismodalOpen,setm
     setmodalOpen(false);
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
   // side-effect code here
   if(flagforedit){
       setformData({
@@ -27,7 +28,7 @@ export default function FormDialog({handelAddItembuttoncallback,ismodalOpen,setm
         })
     }
 }, []);
-    const [formData,setformData]=React.useState({
+    const [formData,setformData]=useState({
         Description:"",
         Weight:"",
         Rate:"",
